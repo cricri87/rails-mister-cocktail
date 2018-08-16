@@ -1,0 +1,19 @@
+<!--  -->
+
+<div class="container text-center">
+  <h1>Our Cocktails :</h1>
+  <p class="info-resto"><%= link_to 'New cocktail', new_cocktail_path, class: 'btn btn-warning' %>
+  <div class="wrapper">
+    <div class="row">
+    <% @cocktails.each_with_index do |cocktail| %>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+           <h4><%= link_to cocktail.name, cocktail_path(cocktail.id) %></h4>
+        <div class="cocktail-card">
+        </div>
+      </div>
+    <% end %>
+    </div>
+  </div>
+</div>
+
+
