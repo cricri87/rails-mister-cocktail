@@ -1,2 +1,19 @@
-<h1>Cocktails#show</h1>
-<p>Find me in app/views/cocktails/show.html.erb</p>
+<div class="container">
+  <div class="wrapper-form info-cocktail">
+    <div class="cards">
+      <h1 class="header">Cocktail of your choice</h1>
+      <h3 class="coctail-name"><%= @cocktail.name %></h3>
+      <% @cocktail.doses.each do |dose| %>
+        <p><%= dose.description %> of <%= dose.ingredient.name %></p>
+      <% end %>
+      <div class="wrapper-show">
+        <%= simple_form_for [@cocktail, @dose] do |f| %>
+        <%= f.input :description, collection: %w(1cl 2cl 4cl 8cl), label: 'Add your dose' %>
+        <%= f.input :ingredient_id, collection: Ingredient.all, label: 'Alcohol' %>
+         <p class="info-cocktail text-center"><%= f.button :submit, class: 'btn btn-warning' %> <%= link_to 'Edit', edit_cocktail_path(@cocktail), class: 'btn btn-success' %>
+            <% end %>
+          </div>
+
+    </div>
+  </div>
+</div>

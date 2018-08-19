@@ -1,0 +1,35 @@
+.wrapper-form {
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 100px;
+  width: 600px;
+  height: 600px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px gray;
+  background-image: asset-url('background.jpeg');
+  background-size: cover;
+}
+
+.info-cocktail {
+  color: #fff;
+  text-align: center;
+}
+
+.cocktail-resto {
+  bottom: 0;
+}
+
+.header {
+  color: #fff;
+  text-align: center;
+}
+
+.is-valid, .form-control {
+  opacity: 0.8;
+}
+
+.form-control-label {
+  color: #fff;
+}
+

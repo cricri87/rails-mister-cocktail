@@ -1,2 +1,10 @@
-<h1>Cocktails#edit</h1>
-<p>Find me in app/views/cocktails/edit.html.erb</p>
+<div class="container">
+  <div class="wrapper-form">
+    <h1 class="header">Update your cocktail</h1>
+    <%= simple_form_for @cocktail do |f| %>
+      <%= f.input :name %>
+       <p class="info-cocktail text-center"><%= f.button :submit, class: 'btn btn-warning' %>
+    <% end %>
+  </div>
+</div>
+
