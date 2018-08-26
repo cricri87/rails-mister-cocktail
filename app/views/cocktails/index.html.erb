@@ -2,10 +2,13 @@
 <div class="banner" style="">
   <div class="banner-content">
     <h1>Coctaile Heaven</h1>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-primary my-2 my-sm-0 search-btn" type="submit">Search</button>
-    </form>
+    <%= form_tag root_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a cocktail"
+  %>
+<% end %>
 
     <p><span id="banner-typed-text"></span></p>
     <a href="#starts" class="btn btn-primary btn-lg">Find a cocktail</a>
